@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bonjour</title>
+</head>
+<body>
+<H1>Bienvenu(e) sur la page de gestion des factures</H1>
+<H2>Actions disponibles :</H2>
+<ul>
+
+    <li><a href="">Ajouter une facture</a></li>
+</ul>
+<table border="1">
+
+    <tr th:each="invoiceList : ${invoiceList}">
+        <td th:text = "${invoiceList.number}"> </td>
+        <td th:text = "${invoiceList.customerName}"></td>
+    </tr>
+</table>
+</body>
+</html>
